@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Welcome {
+public class question1 {
 	public static void main(String[] args) {
 
 		Scanner keyinput = new Scanner(System.in);
