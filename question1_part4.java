@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class question1_part3 {
+public class question1_part4 {
 	public static void main(String[] args) {
 
 		Scanner keyinput = new Scanner(System.in);
@@ -14,13 +14,18 @@ public class question1_part3 {
 		System.out.println("Enter your Last Name:");
 		String lastname = keyinput.nextLine();
 		
-		String concatedFullname = (firstname+" "+middlename+" "+lastname);
+		String concatedFullname = (lastname+", "+middlename+" "+firstname);
 		
-		String modifiedFullname = concatedFullname.replace("a", "@").replace("e", "3");
+    		String trimmedFullname = concatedFullname.trim();
+    		
+    		String[] parts1 = trimmedFullname.split(" ");
+    		
+    		String[] parts2 = trimmedFullname.split(",");
 		
-		String uppercasedFullname = modifiedFullname.toUpperCase();
-		
-		System.out.printf("\nYour Full Name: %s\n", uppercasedFullname);
+		System.out.printf("\nYour Full Name: %s\n", concatedFullname);
+		System.out.printf("\nYour First Name: %s\n", parts1[2]);
+		System.out.printf("\nYour Middle Name: %s\n", parts1[1]);
+		System.out.printf("\nYour Last Name: %s\n", parts2[0]);
 		
 		keyinput.close();
 	}
