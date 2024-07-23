@@ -14,7 +14,7 @@ public class question1_part3 {
 		System.out.println("Enter your Last Name:");
 		String lastname = keyinput.nextLine();
 		
-		String concatedFullname = (lastname+", "+middlename+" "+firstname);
+		String concatedFullname = (firstname+" "+middlename+" "+lastname);
 		
 		String modifiedFullname = concatedFullname.replace("a", "@").replace("e", "3");
 		
